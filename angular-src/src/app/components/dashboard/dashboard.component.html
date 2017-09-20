@@ -1,0 +1,43 @@
+<div>
+<h2>Products</h2>
+
+<div class="row" >
+<ul>
+<li *ngFor="let product of products" style="display: inline;" [ngBusy]="busy">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="{{product.imageUrl}}" alt="...">
+    </a>
+
+<a [routerLink]="['/productdesc']" >{{product.pname}}</a>
+<br>
+<br>
+<h4 style="text-align: center;">{{product.price | currency:'INR':true }}</h4>
+<br>
+<button type="button" class="btn btn-primary" (click)='addToCart(product)' style="margin-left: 45px;" >Add to Cart</button>
+
+  </div>
+
+</li>
+
+</ul>
+<br>
+
+</div>
+<button type="button" (click)='addItems(products)'>Confirm</button>
+<!--<div class="input-group" style="width: 110pt;">
+      <span class="input-group-btn">
+        <button class="btn btn-secondary" type="button" (click)='decrement()'><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button>
+      </span>
+      <input type="text" class="form-control" placeholder="0" [(ngModel)]="counter">
+      <span class="input-group-btn">
+        <button class="btn btn-secondary" type="button" (click)='increment()'><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+      </span>
+    </div>
+<br>
+<button type="button" class="btn btn-primary" (click)='addToCart(product)' style="margin-left: 45px;" >Add to Cart</button>-->
+<button type="button" class="btn btn-outline-primary" [routerLink]="['/cart']">View Cart</button>
+
+
+</div>
+

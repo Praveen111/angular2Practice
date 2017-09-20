@@ -1,0 +1,29 @@
+<form class="form-horizontal" style="margin-left: 250px;" (submit)='onSubmit()'>
+  <fieldset>
+    <legend>Login Here</legend>
+    <div class="form-group" style="width : 250px;">
+      <label for="inputUsername" class="col-lg-2 control-label">Username</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="inputUsername" placeholder="Username" [(ngModel)]='username' name='username'
+          required>
+      </div>
+    </div>
+    <div class="form-group" style="width : 250px;">
+      <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+      <div class="col-lg-10">
+        <input type="password" class="form-control" id="inputPassword" placeholder="Password" [(ngModel)]='password' name='password'
+          required>
+      </div>
+    </div>
+
+
+
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+

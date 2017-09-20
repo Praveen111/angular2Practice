@@ -1,0 +1,20 @@
+<div>
+<h2>Items in your Cart</h2>
+
+<div class="row">
+<ul>
+<li *ngFor="let product of cartProducts" style="display: inline;">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="{{product.imageUrl}}" alt="...">
+    </a>
+<a [routerLink]="['/productdesc']" >{{product.pname}}</a>
+
+<!--<button (click)='addItem(product._id)'>Add to Cart</button>-->
+  </div>
+</li>
+
+</ul>
+
+</div>
+
